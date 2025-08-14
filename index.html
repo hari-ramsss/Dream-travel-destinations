@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dream Travel Destinations</title>
+    <style>
+        @font-face {
+            font-family:'Travelfont'; ;
+            src: url(./font/Sallafi.otf);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image:url(./img/frame-travel-elements.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            font-family: Travelfont;
+            font-size: 30px;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-content {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(3px);
+            padding: 20px;
+            border-radius: 20px;
+            overflow-y: auto;
+            width:50%;
+            height: 90vh;
+            line-height: 1.2;
+            
+        }
+        .main-content h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .main-heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            background: linear-gradient(90deg, #ff6741, #fab785);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        h2{
+            
+             background: linear-gradient(90deg, #00c6ff, #0072ff); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p{
+            background: linear-gradient(90deg, #43cea2, #185a9d); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        li{
+            background: linear-gradient(90deg, #f7971e, #dabf44);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        th, td {
+            background: linear-gradient(90deg, #8360c3, #8affda);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+}
+        header, footer {
+            text-align: center;
+            padding: 10px;
+        }
+        ol, ul {
+            margin: 20px;
+            padding: 0;
+            list-style-type: none;
+        }
+        .main-content section:nth-child(4) {
+            margin: 20px;
+        }
+        .main-content section:nth-child(4){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            overflow-y: hidden;
+            overflow-x: auto;
+            
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+        .drop-zone{
+            border: 2px dashed #000;
+            padding: 20px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        img {
+            max-width: 200px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+    <header>
+        <div class="main-heading"><img src="./img/worldsmall.jpg" alt=""><h1>My dream PLaces</h1>
+        </div>
+        <p>Exploring the world, one destination at a time!</p>
+    </header>
+
+    <section>
+        <h2>Top 5 Destinations</h2>
+        <ol>
+            <li>Paris, France</li>
+            <li>Tokyo, Japan</li>
+            <li>New York City, USA</li>
+            <li>Rome, Italy</li>
+            <li>Maldives</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Things I’d Like to Do</h2>
+        <ul>
+            <li>Try local cuisines</li>
+            <li>Visit famous landmarks</li>
+            <li>Explore hidden gems</li>
+            <li>Meet new people</li>
+            <li>Capture breathtaking photographs</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Destination Comparison</h2>
+        <table>
+            <tr>
+                <th>Place</th>
+                <th>Best Time to Visit</th>
+                <th>Budget (Approx)</th>
+                <th>Rating</th>
+            </tr>
+            <tr>
+                <td>Paris</td>
+                <td>April - June</td>
+                <td>$1500</td>
+                <td>★★★★★</td>
+            </tr>
+            <tr>
+                <td>Tokyo</td>
+                <td>March - May</td>
+                <td>$1800</td>
+                <td>★★★★★</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Travel Memory Pictures to be taken</h2>
+        <div class="image-container"><img src="./img/paris eiffel.jpg" alt="Eiffel Tower in Paris" draggable="true">
+        <img src="./img/tokyo.jpg" alt="Tokyo Cityscape" draggable="true">
+        <img src="./img/maldives.jpg" alt="Beach in Maldives" draggable="true">
+        <img src="./img/twintowers.jpg" alt="twin towers" draggable="true">
+        <img src="./img/rome.webp" alt="Colosseum in Rome" draggable="true"></div>
+
+        <div class="drop-zone">
+            Drop your favorite destination image here!
+        </div>
+    </section>
+
+    <section>
+        <h2>Plan my Trip</h2>
+        <form>
+            <label for="season">Preferred Season:</label>
+            <select id="season" name="season">
+                <option>Winter</option>
+                <option>Spring</option>
+                <option>Summer</option>
+                <option>Autumn</option>
+            </select>
+            <br><br>
+
+            <label for="trip-date">Planned Trip Date:</label>
+            <input type="date" id="trip-date" name="trip-date">
+            <br><br>
+
+            <label for="budget">Budget Preference ($):</label>
+            <input type="range" id="budget" name="budget" min="500" max="5000">
+            <br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <section>
+        <h2>Travel Vibes</h2>
+        <audio controls loop class="audio-player" autoplay volume="0.1">
+            <source src="./music/trap-travel-378471.mp3" type="audio/mpeg" >
+        </audio>
+        <br><br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/exI_hD_4jAM?si=uKz3bbfWQODsW9WN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    </section>
+    <footer>
+        <p>MAY DREAMS COME TRUE <i> -hari ram S</i></p>
+</html>
